@@ -1,0 +1,92 @@
+@charset "utf-8";
+html {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  /*谷歌浏览器字体最小字体12px*/
+  /*关闭字体大小自动调整功能*/
+  -webkit-text-size-adjust: 100%;
+  /*a标签及拥有 :active伪类的元素都有默认的高亮框*/
+  -webkit-tap-highlight-color: transparent;
+  /*禁止文本被选中*/
+  -webkit-user-select: none;
+}
+body {
+  overflow-x: hidden;
+  /*开启mobile网页快速滚动和回弹效果*/
+  -webkit-overflow-scrolling: touch;
+  font-size: 12px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+img {
+  border: 0;
+  display: block;
+  vertical-align: middle;
+  width: 100%;
+}
+input {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 0;
+  clear: both;
+}
+li,
+ol {
+  list-style: none;
+}
+.sprite-icon {
+  display: inline-block;
+  background: url(../image/jd-sprites.png);
+  background-size: 200px 200px;
+  /*将原图400*400压缩成200*200显示，避免在高清屏幕中图像模糊*/
+}
+.line,
+.topline {
+  position: relative;
+}
+.topline:after {
+  /*每一块的横向分割线*/
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 1px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  color: red;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.line:after {
+  /*竖直分割线*/
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  border-right: 1px solid #ccc;
+  color: red;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
